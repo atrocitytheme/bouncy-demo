@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="prop"></div>
+	click to test!	
+</body>
+<script type="text/javascript" src = './src/pys.js'></script>
+<script>
+	var w = new physics();
+	w.setGravity(1, 1)
+	var a = physics.createPos(300, 150)
+	var b = physics.createPos(0, 150)
+
+	var c = physics.createPos(150, 0)
+	var d = physics.createPos(150, 300)
+
+	var s = w.addGround(300, 300);
+	// var p = w.addProps('circle', {radius:1});
+	// var p = w.addProps('circle', {radius:2});
+	// var p = w.addProps('rectangle', {width:10, height:10});
+	// var p = w.addProps('rectangle', {width:150, height:10});
+	// var p = w.addProps('rectangle', {width:10, height:10});
+	// var p = w.addProps('circle', {radius:35});
+	// var p = w.addProps('rectangle', {width:10, height:10, pos: a})
+	// var p = w.addProps('rectangle', {width:10, height:10, pos: b})
+	w.start()
+	var cache = []
+	// window.addEventListener('click', function () {
+	// 	// var pos1 = physics.createPos(Math.random()*100, Math.random()*500);
+	// 	var p = w.addProps('rectangle', {width:40, height:40})
+	// 	p.setSpeed(1,2)
+	// 	cache.push(p)
+	// 	// if (cache.length = 5) {
+	// 	// 	cache.shift().clear()
+	// 	// }
+	// })
+
+	var p = w.addProps('rectangle', {width:1, height:1})
+		// p.setSpeed(-1, 0)
+		p.check_status()
+
+	// var q = w.addProps('rectangle', {width:40, height:40, pos: b})
+	// 	q.setSpeed(1, 0)
+
+	// var m = w.addProps('rectangle', {width:40, height:40, pos:c})
+	// 	m.setSpeed(0, 1)
+	// 	m.checkMode()
+
+	// var n = w.addProps('rectangle', {width:40, height:40, pos:d})
+		// n.setSpeed(0, -1)
+	function clear() {
+		cache.forEach(function (item) {
+			item.clear()
+		})
+
+		cache = []
+	}
+	// c.addEventListener('click', function () {
+	// 	console.log
+	// 	var p = w.addProps('rectangle', {width:10, height:10});
+	// })
+		// var p = w.addProps('rectangle', {width:10, height:10});
+	window.addEventListener('click', function () {
+		w.addProps('rectangle', {width:1, height: 1})
+	})
+	// setTimeout(function () {
+	// 	w.pause()
+	// }, 2000)
+</script>
+</html>

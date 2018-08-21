@@ -1,0 +1,20 @@
+{
+  "name": "physics.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "accelerate.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "pack": "./node_modules/.bin/webpack --config webpack.config.js",
+    "go": "open ./template.html"
+  },
+  "keywords": [
+    "physics"
+  ],
+  "author": "tmsxuan",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "webpack": "^3.4.1"
+  }
+}

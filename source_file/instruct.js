@@ -1,0 +1,5 @@
+/*
+	events: {
+		defaults: ['collideWithWorld', 'collideWithProps']
+	}
+*/
